@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-spillway-blue: #1a6fcf;
+  --color-deep-teal: #0f6e56;
+  --color-warning: #e8a020;
+  --color-danger: #d63b3b;
+  --color-bg-light: #f4f6fa;
+  --color-bg-dark: #0f1117;
+  
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  
+  --radius-card: 10px;
+  --radius-btn: 6px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-light text-slate-800 dark:bg-bg-dark dark:text-slate-200 font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-spillway-blue text-white px-4 py-2 rounded-btn font-medium hover:bg-blue-700 transition-colors;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-card shadow-sm border border-slate-100 dark:border-slate-700 p-6;
+  }
+}
